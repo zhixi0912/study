@@ -3,7 +3,9 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 // import Demo from './views/01-gitting-started/Demo.vue'
 // import Demo from './views/02-template-syntax/Demo.vue'
-import Demo from './views/03-reactivity-fundament/Demo.vue'
+// import Demo from './views/03-reactivity-fundament/Demo.vue'
+// import Demo from './views/04-computed-properties/Demo.vue'
+import Demo from './views/05-class-style/Demo.vue'
 </script>
 
 <template>
