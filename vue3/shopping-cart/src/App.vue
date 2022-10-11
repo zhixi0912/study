@@ -8,7 +8,8 @@
 // import Demo from './views/05-class-style/Demo.vue'
 // import Demo from './views/06-condition-rendering/Demo.vue'
 // import Demo from './views/07-list-rendering/Demo.vue'
-import Demo from './views/08-event/Demo.vue'
+// import Demo from './views/08-event/Demo.vue'
+import Demo from './views/09-form/Demo.vue'
 </script>
 
 <template>
