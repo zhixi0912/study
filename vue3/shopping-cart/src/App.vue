@@ -5,7 +5,9 @@
 // import Demo from './views/02-template-syntax/Demo.vue'
 // import Demo from './views/03-reactivity-fundament/Demo.vue'
 // import Demo from './views/04-computed-properties/Demo.vue'
-import Demo from './views/05-class-style/Demo.vue'
+// import Demo from './views/05-class-style/Demo.vue'
+// import Demo from './views/06-condition-rendering/Demo.vue'
+import Demo from './views/07-list-rendering/Demo.vue'
 </script>
 
 <template>
