@@ -13,7 +13,8 @@
 // import Demo from './views/10-life-cycle/Demo.vue'
 // import Demo from './views/11-watcher/Demo.vue'
 // import Demo from './views/12-components/Demo.vue'
-import Demo from './views/13-props/Demo.vue'
+// import Demo from './views/13-props/Demo.vue'
+import Demo from './views/14-components-event/Demo.vue'
 </script>
 
 <template>
