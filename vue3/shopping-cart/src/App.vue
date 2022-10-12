@@ -14,7 +14,8 @@
 // import Demo from './views/11-watcher/Demo.vue'
 // import Demo from './views/12-components/Demo.vue'
 // import Demo from './views/13-props/Demo.vue'
-import Demo from './views/14-components-event/Demo.vue'
+// import Demo from './views/14-components-event/Demo.vue'
+import Demo from './views/15-fallthrough-attrs/Demo.vue'
 </script>
 
 <template>
