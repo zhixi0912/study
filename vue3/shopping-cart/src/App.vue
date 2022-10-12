@@ -11,7 +11,9 @@
 // import Demo from './views/08-event/Demo.vue'
 // import Demo from './views/09-form/Demo.vue'
 // import Demo from './views/10-life-cycle/Demo.vue'
-import Demo from './views/11-watcher/Demo.vue'
+// import Demo from './views/11-watcher/Demo.vue'
+// import Demo from './views/12-components/Demo.vue'
+import Demo from './views/13-props/Demo.vue'
 </script>
 
 <template>

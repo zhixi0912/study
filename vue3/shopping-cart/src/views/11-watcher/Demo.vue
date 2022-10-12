@@ -8,6 +8,7 @@
 </template>
 
 <script setup>
+    //侦听器
  import { computed } from '@vue/reactivity';
 import { ref, watchEffect, watch  } from 'vue';
  const count = ref(1)
