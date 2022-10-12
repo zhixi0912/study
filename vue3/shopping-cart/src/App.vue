@@ -10,7 +10,8 @@
 // import Demo from './views/07-list-rendering/Demo.vue'
 // import Demo from './views/08-event/Demo.vue'
 // import Demo from './views/09-form/Demo.vue'
-import Demo from './views/10-life-cycle/Demo.vue'
+// import Demo from './views/10-life-cycle/Demo.vue'
+import Demo from './views/11-watcher/Demo.vue'
 </script>
 
 <template>
