@@ -19,7 +19,8 @@
 // import Demo from './views/16-slots/Demo.vue'
 // import Demo from './views/17-inject-provide/Demo.vue'
 // import Demo from './views/18-composition-functions/Demo.vue'
-import Demo from './views/19-directive-plugin/Demo.vue'
+// import Demo from './views/19-directive-plugin/Demo.vue'
+import Demo from './views/20-router/Demo.vue'
 </script>
 
 <template>
