@@ -16,7 +16,8 @@
 // import Demo from './views/13-props/Demo.vue'
 // import Demo from './views/14-components-event/Demo.vue'
 // import Demo from './views/15-fallthrough-attrs/Demo.vue'
-import Demo from './views/16-slots/Demo.vue'
+// import Demo from './views/16-slots/Demo.vue'
+import Demo from './views/17-inject-provide/Demo.vue'
 </script>
 
 <template>
