@@ -21,7 +21,8 @@
 // import Demo from './views/18-composition-functions/Demo.vue'
 // import Demo from './views/19-directive-plugin/Demo.vue'
 // import Demo from './views/20-router/Demo.vue'
-import Demo from './views/21-pinia/Counter.vue'
+// import Demo from './views/21-pinia/Counter.vue'
+import Demo from './views/22-car-example/Producet.vue'
 </script>
 
 <template>

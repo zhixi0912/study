@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "iphone11",
+            "price": 3000,
+            "inventory": 3
+        },
+        {
+            "id": 2,
+            "name": "iphone12",
+            "price": 5000,
+            "inventory": 3
+        },
+        {
+            "id": 3,
+            "name": "iphone13",
+            "price": 8000,
+            "inventory": 6
+        },
+        {
+            "id": 4,
+            "name": "iphone14",
+            "price": 10000,
+            "inventory": 2
+        }
+    ]
+}
