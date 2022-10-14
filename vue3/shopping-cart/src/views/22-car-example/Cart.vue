@@ -1,7 +1,7 @@
 <template>
     <div v-if="cartList.length > 0 && cartStore.toAllPrice > 0">
         <h2>购物车</h2>
-        <hr>{{cartList}}
+        <hr>
         <ul>
             <template v-for="item in cartList">
                 <li v-if="item.quantity >= 1" class="car-shop">
