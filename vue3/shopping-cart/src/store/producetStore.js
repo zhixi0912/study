@@ -14,8 +14,8 @@ const useProducetStore = defineStore('producetStore', {
             //http://localhost:9000/data   浏览器中通过该地址访问定义好的json数据
             let result = await axios.get('http://localhost:9000/data')
             // console.log('data---->', result.data)
+            
             this.producets = result.data
-
             // axios.post('http://localhost:9000/data', '{id: 5, name: "iphone15", price: 1200,inventory:2}')
             //json-server服务可以通过post请求向json插入一条数据,但每次个性json数据后需求重启服务才能更新页面数据
         },
@@ -25,6 +25,7 @@ const useProducetStore = defineStore('producetStore', {
             })
             if(p){
                 p.inventory = producet.inventory
+                console.log('---->',producet)
             }
         }
     }
