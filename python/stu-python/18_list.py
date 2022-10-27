@@ -1,3 +1,5 @@
+# list 列表
+
 shopping_list = []
 shopping_list.append("键盘")
 shopping_list.append("键帽")
