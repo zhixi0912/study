@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
- import { ref, onMounted } from 'vue';
+ import { ref, onMounted, onBeforeMount } from 'vue';
  import IphoneImg from '../../../public/vite.svg'
  import {storeToRefs} from 'pinia'
  import Cart from './Cart.vue'
@@ -25,6 +25,9 @@
  const {addToCart} = useCartStore()
  onMounted(()=>{
     producetStore.loadData()
+ })
+ onBeforeMount(()=>{
+    console.log('onBeforeMount')
  })
 </script>
 
