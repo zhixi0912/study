@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}问答博客-注册{% endblock %}
+{% block header %}
+<script src="{{ url_for('static', filename='js/register.js') }}"></script>
+{% endblock %}
+{% block body %}
+<style type="text/css">
+    .form-box {
+        padding: 5px;
+        width: 300px;
+        margin: 0 auto;
+    }
+</style>
+<div class="form-box">
+    <form class="needs-validation" method="post">
+        <div class="form-group">
+          <label for="email">邮箱</label>
+          <input type="text" class="form-control" name="email" required>
+            <div class="invalid-feedback"></div>
+        </div>
+        <div class="form-group">
+            <label for="v_code">验证码</label>
+            <div class="input-group">
+              <input type="text" class="form-control" name="v_code" required>
+                <div class="invalid-feedback"></div>
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="captcha-btn">获取验证码</button>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="user_name">用户名</label>
+          <input type="text" class="form-control" name="user_name" required>
+            <div class="invalid-feedback"></div>
+        </div>
+        <div class="form-group">
+          <label for="password">密码</label>
+          <input type="text" class="form-control" name="password" required>
+            <div class="invalid-feedback"></div>
+        </div>
+        <div class="form-group">
+          <label for="confirm_pw">确认密码</label>
+          <input type="text" class="form-control" name="confirm_pw" required>
+            <div class="invalid-feedback"></div>
+        </div>
+        <div class="form-group text-center">
+            <button class="btn btn-primary btn-block" type="submit" id="register">立即注册</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

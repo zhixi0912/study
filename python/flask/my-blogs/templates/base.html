@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-4.6.1-dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='init.css') }}">
+    <script src="{{ url_for('static', filename='jquery@3.5.1/jquery.slim.min.js') }}"></script>
+    {% block header %}{% endblock %}
+</head>
+<body>
+<div class="navbar-light bg-light nav-box">
+    <nav class="navbar navbar-expand-lg container">
+          <a class="navbar-brand" href="{{ url_for('qa.index') }}">博客问答</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('qa.index') }}">首页 <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">美食</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">影视</a>
+              </li>
+                <li>
+                    <form class="form-inline">
+                      <input class="form-control mr-sm-2" type="search" placeholder="关键字" aria-label="关键字">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
+                    </form>
+                </li>
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+                {% if user %}
+                    <span class="btn btn-link btn-sm my-2 my-sm-0">{{ user.username }}</span>
+                    <a class="btn btn-link btn-sm my-2 my-sm-0" href="{{ url_for('auth.logout') }}">退出登录</a>
+                {% else %}
+                <a class="btn btn-link btn-sm my-2 my-sm-0" href="{{ url_for('auth.login') }}">登录</a>
+                <a class="btn btn-link btn-sm my-2 my-sm-0" href="{{ url_for('auth.register') }}">注册</a>
+                {% endif %}
+            </div>
+          </div>
+    </nav>
+</div>
+<div class="container container-main">
+    {% block body %}{% endblock %}
+</div>
+</body>
+</html>
