@@ -67,6 +67,7 @@ def register():
 @bp.route("/logout")
 def logout():
     session.clear()
+    print(session)
     return redirect(url_for("auth.login"))
 
 @bp.route("/captcha/image")

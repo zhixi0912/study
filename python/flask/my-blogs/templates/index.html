@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}问答博客-问答{% endblock %}
+{% block header %}{% endblock %}
+{% block body %}
+<div>
+    {% for question in questtions %}
+    <div class="card mb-3 shadow-sm bg-white rounded">
+      <div class="row no-gutters">
+          <div class="col-md-2 text-right" style="vertical-align: middle">
+              <img class="rounded-circle"
+                   style="width: 100px; height: 100px;margin-top: 20px;"
+                   src="{{ url_for('static', filename='images/userImg.jpg') }}"
+                   alt="用户头像"
+              >
+            </div>
+            <div class="col-md-10">
+              <div class="card-body">
+                  <h5 class="card-title"><a href="{{ url_for('qa.qa_detail', qa_id=question.id) }}">{{ question.title }}</a></h5>
+                <p class="card-text">{{ question.content }}</p>
+                <p class="card-text text-right">
+                    <small class="text-muted">{{ question.author.username }}</small>
+                    <small class="text-muted">{{ question.create_time }}</small>
+                </p>
+              </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
