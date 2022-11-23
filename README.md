@@ -39,23 +39,14 @@
 
 ### python flask 学习项目之 my-blogs
 
-<p align="center">
-    <a href="#">
-        <img src="images/my-blogs/截屏2022-11-23 16.20.30.png" alt="">
-    </a>
-    <a href="#">
-        <img src="images/my-blogs/截屏2022-11-23 16.22.38.png" alt="">
-    </a>
-      <a href="#">
-        <img src="images/my-blogs/截屏2022-11-23 16.22.54.png" alt="">
-    </a>
-    <a href="#">
-        <img src="images/my-blogs/截屏2022-11-23 16.21.03.png" alt="">
-    </a>
-    <a href="#">
-        <img src="images/my-blogs/截屏2022-11-23 16.21.24.png" alt="">
-    </a>
-    <a href="#">
-        <img src="images/my-blogs/截屏2022-11-23 16.22.13.png" alt="">
-    </a>
-</p>
+<a href="#">
+    <img src="images/my-blogs/截屏2022-11-23 16.20.30.png" alt="">
+</a>
+#### 预览项目
+
+|  |  |
+|---------------------|---------------------|
+| ![](images/my-blogs/截屏2022-11-23 16.20.30.png)  | ![](images/my-blogs/截屏2022-11-23 16.22.38.png)  |
+| ![](images/my-blogs/截屏2022-11-23 16.22.54.png)|  ![](images/my-blogs/截屏2022-11-23 16.21.03.png)   |
+| ![](images/my-blogs/截屏2022-11-23 16.21.24.png) |  ![](images/my-blogs/截屏2022-11-23 16.22.13.png)   |
+
