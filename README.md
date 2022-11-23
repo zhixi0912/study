@@ -39,6 +39,47 @@
 
 ### python flask 学习项目之 my-blogs
 
+```bash
+# 下 载
+git clone https://gitee.com/zhixi0912/study.git
+
+# 进 入 目 录
+cd python
+cd flask
+cd my-blogs
+# 安 装
+pip install -r requirement\requirement-dev.txt
+
+# 配 置
+.env
+
+```
+
+#### 修改配置
+
+```python
+.env
+# MySql配置信息
+MYSQL_HOST=127.0.0.1
+MYSQL_PORT=3306
+MYSQL_DATABASE=**
+MYSQL_USERNAME=root
+MYSQL_PASSWORD=root
+
+# Redis 配置
+REDIS_HOST=127.0.0.1
+REDIS_PORT=6379
+
+# 密钥配置
+SECRET_KEY='qwerasdfzxcv'
+
+# 邮箱配置
+MAIL_SERVER='smtp.qq.com'
+MAIL_USERNAME='123@qq.com'
+MAIL_PASSWORD='XXXXX' # 生成的授权码
+```
+
+
 <p align="center">
     <a href="#">
         <img src="images/my-blogs/截屏2022-11-23 16.20.30.png" alt="">
