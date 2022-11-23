@@ -50,9 +50,6 @@
         <img src="images/my-blogs/截屏2022-11-23 16.22.54.png" alt="">
     </a>
     <a href="#">
-        <img src="images/my-blogs/截屏2022-11-23 16.20.38.png" alt="">
-    </a>
-    <a href="#">
         <img src="images/my-blogs/截屏2022-11-23 16.21.03.png" alt="">
     </a>
     <a href="#">
