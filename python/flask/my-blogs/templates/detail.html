@@ -13,16 +13,18 @@
         {{ question.content }}
     </div>
     <hr>
-    <h4>评论（2）：</h4>
-    <form method="post">
+    <h4>评论（{{ question.answers|length }}）：</h4>
+    <form action="{{ url_for('qa.public_answer') }}" method="post">
         <div class="form-group">
-            <textarea class="form-control" name="content" rows="10" placeholder="请输入内容"></textarea>
+            <textarea class="form-control" name="content" rows="3" placeholder="请输入内容"></textarea>
+            <input type="hidden" name="question_id" value="{{ question.id }}">
           </div>
         <div class="form-group text-right">
             <button class="btn btn-primary" type="submit">评论</button>
         </div>
     </form>
     <hr>
+    {% for answer in question.answers %}
     <div class="row">
         <div class="col-md-2 text-right" style="vertical-align: middle">
               <img class="rounded-circle"
@@ -33,13 +35,14 @@
         </div>
         <div class="col-md-10">
             <p class="clearfix">
-                <span>admin</span>
-                <span class="float-right">2022-2-22</span>
+                <span>{{ answer.author.username }}</span>
+                <span class="float-right">{{ answer.create_time }}</span>
             </p>
             <div>
-                对对对对对
+                {{ answer.content }}
             </div>
         </div>
     </div>
+    {% endfor %}
 </div>
 {% endblock %}

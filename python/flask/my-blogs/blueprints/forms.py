@@ -1,7 +1,7 @@
 # pip install flask-wtf
 # pip install email_validator
 import wtforms
-from wtforms.validators import Email, length, EqualTo
+from wtforms.validators import Email, length, EqualTo, input_required
 from models import UserModel
 import redis
 
@@ -38,3 +38,7 @@ class LoginForm(wtforms.Form):
 class QuestionForm(wtforms.Form):
     title = wtforms.StringField(validators=[length(min=3, max=100, message="标题格式错误")])
     content = wtforms.StringField(validators=[length(min=3, message="内容格式错误")])
+
+class AnswerForm(wtforms.Form):
+    content = wtforms.StringField(validators=[length(min=3, message="内容格式错误")])
+    question_id = wtforms.StringField(validators=[input_required(message="标题格式错误")])

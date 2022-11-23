@@ -3,7 +3,8 @@
 {% block header %}{% endblock %}
 {% block body %}
 <div>
-    {% for question in questtions %}
+    {% if questions|length > 0 %}
+    {% for question in questions %}
     <div class="card mb-3 shadow-sm bg-white rounded">
       <div class="row no-gutters">
           <div class="col-md-2 text-right" style="vertical-align: middle">
@@ -26,5 +27,12 @@
       </div>
     </div>
     {% endfor %}
+    {% else %}
+        <div class="card mb-3 text-center">
+          <div class="card-body">
+            <p class="card-text">没有查到与"{{ q }}"有关的内容</p>
+          </div>
+        </div>
+    {% endif %}
 </div>
 {% endblock %}
