@@ -2,9 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>定时器</title>
+    <title>定时器-抽奖</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 </head>
 <body>
- 
+ <div class="container">
+     <p class="page-header">Promise初体验</p>
+     <button class="btn btn-primary" id="btn">点击抽奖</button>
+ </div>
 </body>
+<script>
+function rand(m, n) {
+    return Math.ceil(Math.random() * (n - m + 1)) + m - 1
+}
+/*
+* 点击按钮，2S后显示是否中奖
+*
+*/
+const btn = document.querySelector('#btn')
+btn.addEventListener('click', function (){
+    // getClick()
+    getPromiseClick()
+})
+
+function getClick() {
+    setTimeout(()=>{
+        let n = rand(1, 100)
+        if (n <= 30) {
+            alert('恭喜恭喜，中奖了！')
+        } else {
+            alert('再接再厉')
+        }
+    },1000)
+}
+
+function getPromiseClick() {
+    // resolve 解决 函数类型的数据
+    // reject 拒绝 函数类型的数据
+    const p = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            let n = rand(1, 100)
+            if (n <= 30) {
+                resolve(n)  // 将Promise对象的状态设置为【成功】
+            } else {
+                reject(n)  // 将Promise对象的状态设置为【失败】
+            }
+        },1000)
+    })
+    p.then((res)=>{
+        alert("恭喜恭喜，您中奖了！中奖号码是：" + res)
+    },(err)=>{
+        alert("再接再厉！你的号码是：" + err)
+    })
+}
+</script>
 </html>
