@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+textarea{
+    min-height: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+}
+.red-box{
+    min-height: 20px;
+    border: 1px solid red;
+    padding: 10px;
+    margin: 0 auto;
+}
+.user-box{
+    min-height: 50px;
+    border: 1px solid green;
+    padding: 10px;
+    margin: 10px auto;
+}
+</style>
+<body>
+<textarea id="text">请输入参入抽奖的用户，以,间隔</textarea>
+<button id="addUser">添加名单</button>
+<div class="user-box" id="uBox"></div>
+<button id="btn" disabled>抽奖</button>
+<div class="red-box" id="sBox"></div>
+
+</body>
+<script>
+
+    let array = []
+    let newArray = []
+    let values = []
+    // 开始抽奖
+    function getArrayItem(arr) {
+        const sBox = document.getElementById('sBox')
+        if (arr.length > 1 && values.length < 6) {
+            let tempArray = arr
+            const arrIndex = Math.floor(Math.random() * tempArray.length)
+            const val = tempArray[arrIndex]
+            values.push(val)
+            sBox.innerText = values
+            tempArray.splice(arrIndex, 1)
+            newArray = tempArray
+        } else {
+            sBox.innerText = '抽奖结束'
+        }
+
+    }
+
+    //抽奖动作
+    const btn = document.querySelector("#btn")
+    btn.addEventListener('click', function (){
+        if (newArray.length > 0) {
+            getArrayItem(newArray)
+        } else {
+            getArrayItem(array)
+        }
+    })
+
+
+    const addUser = document.querySelector("#addUser")
+    addUser.addEventListener('click', function (){
+        const text = document.querySelector("#text")
+        const uBox = document.querySelector("#uBox")
+        // 获取抽奖数据
+        var reg = new RegExp("([\u3002\uff1b\uff0c\uff1a\u201c\u201d\uff08\uff09\u3001\uff1f\u300a\u300b\uff01\u3010\u3011\uffe5])+","g");
+        if (text.value == '请输入参入抽奖的用户，以,间隔' || reg.test(text.value)) {
+            uBox.innerText='请输入正确抽奖用户名单！(不能有中文标点符号)'
+        } else {
+            const userList = text.value.split(',')
+            array = userList
+            uBox.innerText=userList
+            btn.disabled = false
+            alert('添加成功！')
+        }
+
+    })
+</script>
+</html>
