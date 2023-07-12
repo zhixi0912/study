@@ -1,11 +1,12 @@
 package method;
 
-public class Demo1 {
+public class Demo01 {
     // void:返回为空
     public static void main(String[] args) {
         int sum = add(1, 2);
         System.out.println(sum);
-        test();
+        Demo01 demo1 = new Demo01();
+        demo1.test();
     }
     /**
     * 修饰符 返回值类型 方法名(参数类型 参数名) {
@@ -19,7 +20,7 @@ public class Demo1 {
         return a+b;
     }
 
-    public static void test() {
+    public void test() {
         for (int i = 1; i<= 5; i++) {
             for (int j = 5; j>= i; j--) {
                 System.out.print(" ");
