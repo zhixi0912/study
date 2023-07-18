@@ -1,0 +1,12 @@
+:root {
+  --menuBg: #304156;
+}
+
+@mixin flexComm($direction, $justify-content, $align-items) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+$menuBg: var(--menuBg);
