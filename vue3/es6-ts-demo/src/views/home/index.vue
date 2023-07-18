@@ -6,7 +6,9 @@
         class="section"
       >
 <!--        {{ item }}-->
-        <img :src="url" />
+        <div style="display: block; height: 100vh; overflow: hidden;">
+          <img :src="url" />
+        </div>
       </div>
   </full-page>
 </template>
@@ -116,7 +118,6 @@ const options = reactive({
 })
 const url = ref('')
 const init = () => {
-  console.log("勾-------->")
   getMovieList()
   .then(response => {
     url.value = response.data.imgurl
