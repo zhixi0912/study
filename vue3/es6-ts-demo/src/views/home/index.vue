@@ -1,12 +1,27 @@
 <template>
   <full-page :options="options" ref="page">
       <div
-        v-for="item in 5"
-        :key="item"
+        v-for="(item, index) in dataLst"
+        :key="index"
         class="section"
       >
-<!--        {{ item }}-->
-        <div style="display: block; height: 100vh; overflow: hidden;">
+        <div class="box">
+          <!--            :class="[item.active ? `animate__animated animate__backInLeft` : `animate__animated animate__backInRight`]"-->
+<!--          :class="[item.active ? 'show' : 'hide']"-->
+          <transition
+            name="animate__animated animate__bounceInLeft" mode=""
+            enter-active-class="animated animate__bounceInLeft"
+            leave-active-class="animated animate__bounceOutRight"
+          >
+            <div
+              v-show="item.active"
+              class="title"
+            >
+              {{ item.active }} | {{ index }}
+            </div>
+          </transition>
+        </div>
+        <div style="display: block; height: 100vh; overflow: hidden;" v-if="false">
           <img :src="url" />
         </div>
       </div>
@@ -37,8 +52,20 @@ const options = reactive({
   // paddingBottom: '0',
   // 滚动到某一屏的回调
   afterLoad: function (anchorLink, page) {
-    init()
-    console.log("url--------->", url.value);
+    // init()
+    dataLst.forEach((item, index) => {
+      if (index === page.index) {
+        item.active = true
+      }
+    })
+    console.log('dataLst---------->', dataLst)
+  },
+  onLeave: function (page, direction) {
+    dataLst.forEach((item, index) => {
+      if (index === page.index) {
+        item.active = false
+      }
+    })
   },
   // onLeave: this.onLeave
   //用来控制slide幻灯片的箭头，设置为false，两侧的箭头会消失
@@ -106,11 +133,11 @@ const options = reactive({
   // navigation: true,
   // anchors: ['page1', 'page2', 'page3'],
   sectionsColor: [
-    '#41b883',
-    '#ff5f45',
-    '#0798ec',
-    '#fec401',
-    '#1bcee6',
+    '#e7ebde',
+    '#eadbbe',
+    '#c4cfbd',
+    '#8b978d',
+    '#6a7867',
     '#ee1a59',
     '#2c3e4f',
     '#ba5be9',
@@ -118,6 +145,26 @@ const options = reactive({
   ]
 })
 const url = ref('')
+const dataLst = reactive([
+  {
+    active: false
+  },
+  {
+    active: false
+  },
+  {
+    active: false
+  },
+  {
+    active: false
+  },
+  {
+    active: false
+  }
+])
+const isShow = (show: boolean) => {
+  return show ? `animate__animated animate__backInLeft` : 'animate__animated animate__backInRight'
+}
 const init = () => {
   getMovieList()
   .then(response => {
@@ -127,6 +174,24 @@ const init = () => {
 }
 
 onMounted(() => {
-  init();
+  // init();
 });
 </script>
+
+<style lang="scss" scoped>
+.box {
+  width: 500px; height: 80px; margin: 0 auto;
+  text-align: center;
+  display: block;
+  .title {
+    //display: none;
+    font-size: 2em;
+    color: #ffffff;
+    //transform: translateX(-2000px);
+    //animation-fill-mode: both;
+  }
+  .show {
+    animation: zoomInDown;
+  }
+}
+</style>
