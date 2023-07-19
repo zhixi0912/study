@@ -38,6 +38,7 @@ const options = reactive({
   // 滚动到某一屏的回调
   afterLoad: function (anchorLink, page) {
     init()
+    console.log("url--------->", url.value);
   },
   // onLeave: this.onLeave
   //用来控制slide幻灯片的箭头，设置为false，两侧的箭头会消失
