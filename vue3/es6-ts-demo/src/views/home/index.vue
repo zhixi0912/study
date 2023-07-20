@@ -169,7 +169,6 @@ const init = () => {
   getMovieList()
   .then(response => {
     url.value = response.data.imgurl
-    console.log("勾选权限--------->", response.data);
   })
 }
 
@@ -184,11 +183,8 @@ onMounted(() => {
   text-align: center;
   display: block;
   .title {
-    //display: none;
     font-size: 2em;
     color: #ffffff;
-    //transform: translateX(-2000px);
-    //animation-fill-mode: both;
   }
   .show {
     animation: zoomInDown;
