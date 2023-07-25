@@ -2,7 +2,8 @@ package method;
 import java.util.Scanner;
 public class Calculator {
     /**
-     * 计算器功能，要求实现加减乘除功能，并且能够循环接收新的数据，通过用户交互实现
+     * 计算器功能，要求实现加减乘除功能，
+     * 并且能够循环接收新的数据，通过用户交互实现
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
