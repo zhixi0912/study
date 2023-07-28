@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Hello world!
- * java
+ * java test
  */
 public class App 
 {
