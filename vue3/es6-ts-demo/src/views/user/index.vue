@@ -88,7 +88,7 @@ const onSubmit = () => {
 }
 
 onMounted(() => {
-  // console.log('appContext------------>', appContext.app.use(ElementPlus))
+  console.log('appContext------------>', appContext.app.use(ElementPlus))
 })
 </script>
 <style lang="scss" scoped>
