@@ -13,7 +13,8 @@ const login = () => {
   const userInfo = reactive({
     id: '01',
     name: '小明',
-    token: 'qwert12345'
+    token: 'qwert12345'，
+    age: '18'
   })
   // useLocalStorage('userInfo', userInfo)
   appContext.app.use(ElementPlus)
