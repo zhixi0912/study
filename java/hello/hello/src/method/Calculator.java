@@ -19,7 +19,7 @@ public class Calculator {
         } else {
             System.out.println("非数字");
             if (preams == '+') {
-//                System.out.println("这是加号");
+                System.out.println("这是加号");
             }
         }
 

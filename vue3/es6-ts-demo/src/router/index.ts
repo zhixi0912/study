@@ -1,11 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 export const constantRoutes = [
-  {
-    path: '/index',
-    name: 'index',
-    component: () => import('../views/home/index.vue')
-  },
+
   {
     path: '/login',
     name: 'login',
@@ -15,7 +11,21 @@ export const constantRoutes = [
     component: () => import('../views/login/index.vue')
   },
   {
+    path: '/index',
+    name: 'index',
+    component: () => import('../views/home/index.vue')
+  },
+  {
     path: '/',
+    name: 'clock',
+    // route level code-splitting
+    // this generates a separate chunk (About.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import('../views/clock/index.vue')
+  },
+
+  {
+    path: '/user',
     name: 'user',
     // route level code-splitting
     // this generates a separate chunk (About.[hash].js) for this route
