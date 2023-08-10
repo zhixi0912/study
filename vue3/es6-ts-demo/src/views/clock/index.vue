@@ -5,9 +5,15 @@
 </template>
 <script setup lang="ts">
 import { onMounted ,ref } from 'vue'
-import { p } from './index'
+import { clock } from './index'
+
+
+//clock(canvas)
 onMounted(()=>{
-  p.draw();
+  const canvas = document.querySelector('canvas')
+  clock(canvas)
+  console.log('canvas----------->', canvas)
+
 })
 </script>
 <style lang="scss" scoped>
