@@ -4,16 +4,12 @@
   </div>
 </template>
 <script setup lang="ts">
-import { onMounted ,ref } from 'vue'
+import { onMounted } from 'vue'
 import { clock } from './index'
 
-
-//clock(canvas)
 onMounted(()=>{
   const canvas = document.querySelector('canvas')
   clock(canvas)
-  console.log('canvas----------->', canvas)
-
 })
 </script>
 <style lang="scss" scoped>
