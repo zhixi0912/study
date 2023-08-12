@@ -23,6 +23,8 @@ const router = useRouter();
 function back() {
   router.back();
 }
+// IDEA激活
+// https://docs.qq.com/doc/DUkRlY0lXQW16emZF
 </script>
 
 <template>
