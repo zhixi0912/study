@@ -3,7 +3,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 export const constantRoutes = [
 
   {
-    path: '/login',
+    path: '/',
     name: 'login',
     // route level code-splitting
     // this generates a separate chunk (About.[hash].js) for this route
@@ -16,7 +16,7 @@ export const constantRoutes = [
     component: () => import('../views/home/index.vue')
   },
   {
-    path: '/',
+    path: '/clock',
     name: 'clock',
     // route level code-splitting
     // this generates a separate chunk (About.[hash].js) for this route
