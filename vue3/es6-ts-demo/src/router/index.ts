@@ -5,9 +5,6 @@ export const constantRoutes = [
   {
     path: '/',
     redirect: '/login',
-    // route level code-splitting
-    // this generates a separate chunk (About.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     children: [
       {
         path: 'login',
@@ -19,11 +16,11 @@ export const constantRoutes = [
         component: () => import("@/views/error-page/401.vue"),
         meta: { hidden: true },
       },
-      {
-        path: "404",
-        component: () => import("@/views/error-page/404.vue"),
-        meta: { hidden: true },
-      }
+//      {
+//        path: "404",
+//        component: () => import("@/views/error-page/404.vue"),
+//        meta: { hidden: true },
+//      }
     ]
     
   },
@@ -35,19 +32,19 @@ export const constantRoutes = [
   {
     path: '/clock',
     name: 'clock',
-    // route level code-splitting
-    // this generates a separate chunk (About.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import('../views/clock/index.vue')
   },
 
   {
     path: '/user',
     name: 'user',
-    // route level code-splitting
-    // this generates a separate chunk (About.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import('../views/user/index.vue')
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: '404',
+    meta: { hidden: true },
+    component: () => import("@/views/error-page/404.vue"),
   }
 ]
 
