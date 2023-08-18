@@ -24,6 +24,7 @@
         <div style="display: block; height: 100vh; overflow: hidden;" v-if="false">
           <img :src="url" />
         </div>
+
       </div>
   </full-page>
 </template>
