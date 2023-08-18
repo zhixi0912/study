@@ -1,5 +1,5 @@
 <template>
-  <el-row :gutter="12">
+  <el-row :gutter="12" style="justify-content: space-around;">
     <el-col :span="8">
       <el-card shadow="hover">
         <el-form
