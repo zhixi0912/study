@@ -59,7 +59,6 @@ const options = reactive({
         item.active = true
       }
     })
-    console.log('dataLst---------->', dataLst)
   },
   onLeave: function (page, direction) {
     dataLst.forEach((item, index) => {
