@@ -29,7 +29,7 @@
   </full-page>
 </template>
 <script setup lang="ts">
-import {reactive, onMounted, ref} from "vue";
+import {reactive, onMounted, ref, toRefs} from "vue";
 import { getMovieList } from "@/api/home";
 
 const options = reactive({

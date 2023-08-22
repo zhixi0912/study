@@ -13,7 +13,6 @@ export function corrugation(can: any) {
     canvas.height = 300
     ctx.clearRect(0, 0, canvas.width, canvas.height); // 清空画布
     step += 1; // 角度
-    console.log('step---------->', step)
     // 遍历colors数组，进行绘制
     colors.forEach((item, index) => {
         ctx.fillStyle = item; // 画笔的颜色

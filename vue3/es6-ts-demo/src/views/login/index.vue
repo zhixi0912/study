@@ -206,6 +206,7 @@ onMounted(() => {
   }, 1000 / 60)
 });
 onUnmounted(() => {
+  //销毁动画组件
   clearInterval(anmin)
 })
 </script>
