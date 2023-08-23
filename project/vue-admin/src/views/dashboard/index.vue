@@ -3,9 +3,13 @@
 </script>
 
 <template>
-home
+    <div class="main">
+    home
+    </div>
 </template>
 
 <style scoped>
-
+.main {
+    height: 1800px;
+}
 </style>

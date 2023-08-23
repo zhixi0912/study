@@ -8,6 +8,30 @@
   </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+.app-main {
+  position: relative;
+  width: 100%;
 
+  /* 50= navbar  50  */
+  min-height: calc(100vh - 60px);
+  overflow: hidden;
+  background-color: var(--el-bg-color-page);
+}
+
+.fixed-header + .app-main {
+  padding-top: 50px;
+}
+
+.hasTagsView {
+  .app-main {
+    /* 84 = navbar + tags-view = 50 + 34 */
+    min-height: calc(100vh - 84px);
+  }
+
+  .fixed-header + .app-main {
+    min-height: 100vh;
+    padding-top: 84px;
+  }
+}
 </style>
