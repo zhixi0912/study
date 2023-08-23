@@ -3,7 +3,9 @@
 </script>
 
 <template>
-  $END$
+  <section class="app-main">
+    <router-view />
+  </section>
 </template>
 
 <style scoped>

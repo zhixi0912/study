@@ -1,10 +1,37 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-
+export const Layout = () => import("@/layout/index.vue");
 export const constantRoutes = [
     {
-        path: '/',
+        path: '/login',
         name: 'login',
         component: () => import('@/views/login/index.vue')
+    },
+    {
+        path: "/",
+        component: Layout,
+        meta: { hidden: true },
+        children: [
+            {
+                path: "/dashboard",
+                component: () => import("@/views/dashboard/index.vue"),
+                meta: {
+                    title: "dashboard",
+                    icon: "homepage",
+                    affix: true,
+                    keepAlive: true,
+                },
+            },
+            {
+                path: "401",
+                component: () => import("@/views/error-page/401.vue"),
+                meta: { hidden: true },
+            },
+            {
+                path: "404",
+                component: () => import("@/views/error-page/404.vue"),
+                meta: { hidden: true },
+            }
+        ],
     },
 ]
 

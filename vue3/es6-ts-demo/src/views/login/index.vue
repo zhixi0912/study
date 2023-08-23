@@ -194,12 +194,35 @@ const options = Array.from({ length: 10000 }).map((_, idx) => ({
   value: `${idx + 1}`,
   label: `${idx + 1}`,
 }))
+
+
+const forIn = () => {
+  const array1 = ['A', 'B', 'C'];
+  const array2 = new Set(['A', 'B', 'C']);
+  const array3 = new Map([[1, 'x'], [2, 'y'], [3, 'z']]);
+  for (let x of array1) { // 遍历Array
+    console.log(x);//'A', 'B', 'C'
+  }
+  for (let index in array1) {
+    console.log('----------->', index, array1[index])
+  }
+  for (let x of array2) { // 遍历Set
+    console.log(x);//'A', 'B', 'C'
+  }
+  for (let x of array3) { // 遍历Map
+      console.log(x[0] + '=' + x[1]);//1='x',2='y',3='z'
+  }
+}
+
+
+
 const goHome = () => {
   router.push('/index')
 }
 let anmin: any
 onMounted(() => {
   // init();
+  forIn();
   anmin = setInterval(()=>{
     const canvas = document.querySelector('canvas')
     corrugation(canvas)
