@@ -5,7 +5,9 @@
         <sidebar />
       </el-aside>
       <el-container class="main-container">
-        <el-header>Header</el-header>
+        <el-header>
+          <navBar />
+        </el-header>
         <el-main style="padding: 0">
           <appMain />
         </el-main>
@@ -17,6 +19,7 @@
 <script setup lang="ts">
 import appMain from './compoents/index.vue'
 import sidebar from './compoents/Sidebar/index.vue'
+import navBar from './compoents/NavBar/index.vue'
 </script>
 
 <style lang="scss" scoped>

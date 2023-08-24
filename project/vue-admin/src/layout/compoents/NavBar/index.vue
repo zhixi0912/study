@@ -1,6 +1,12 @@
 <template>
     <div class="navbar">
         <div class="flex">
+          <div>
+            <el-icon><Grid /></el-icon>
+          </div>
+          <Breadcrumb />
+        </div>
+        <div class="flex">
           <NavRight />
         </div>
     </div>
@@ -8,6 +14,8 @@
 
 <script setup lang="ts">
 import NavRight from './NavRight.vue'
+import Breadcrumb from '../Breadcrumb/index.vue'
+import { Grid } from '@element-plus/icons-vue'
 </script>
 
 <style lang="scss" scoped>
