@@ -24,6 +24,9 @@ import navBar from './compoents/NavBar/index.vue'
 
 <style lang="scss" scoped>
 .app-wrapper {
+  .el-aside {
+    overflow: inherit;
+  }
   &::after {
     display: table;
     clear: both;
