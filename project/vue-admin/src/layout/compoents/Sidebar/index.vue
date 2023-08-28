@@ -1,12 +1,8 @@
 
 
 <template>
-  <el-radio-group v-model="isCollapse" style="margin-bottom: 20px">
-    <el-radio-button :label="false">expand</el-radio-button>
-    <el-radio-button :label="true">collapse</el-radio-button>
-  </el-radio-group>
   <div class="sidebar-main">
-    <div class="switch-box">
+    <div class="switch-box" @click="switchStatus">
       <el-icon><Grid /></el-icon>
     </div>
     <el-menu
@@ -61,6 +57,9 @@ import {
 } from '@element-plus/icons-vue'
 
 const isCollapse = ref(false)
+const switchStatus = () => {
+  isCollapse.value = !isCollapse.value
+}
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }
@@ -78,6 +77,9 @@ const handleClose = (key: string, keyPath: string[]) => {
     top: 50%;
 //    background: #000000;
     z-index: 9;
+    &i {
+      cursor: pointer;
+    }
   }
 }
 </style>
