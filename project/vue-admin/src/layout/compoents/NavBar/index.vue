@@ -1,9 +1,6 @@
 <template>
     <div class="navbar">
         <div class="flex">
-          <div>
-            <el-icon><Grid /></el-icon>
-          </div>
           <Breadcrumb />
         </div>
         <div class="flex">

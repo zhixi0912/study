@@ -77,7 +77,7 @@ const handleClose = (key: string, keyPath: string[]) => {
     top: 50%;
 //    background: #000000;
     z-index: 9;
-    &i {
+    & i {
       cursor: pointer;
     }
   }

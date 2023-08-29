@@ -1,18 +1,12 @@
 <template>
-  <div class="app-wrapper common-layout">
-    <el-container>
-      <el-aside class="sidebar-container">
-        <sidebar />
-      </el-aside>
-      <el-container class="main-container">
-        <el-header>
-          <navBar />
-        </el-header>
-        <el-main style="padding: 0">
-          <appMain />
-        </el-main>
-      </el-container>
-    </el-container>
+  <div :class="classObj" class="app-wrapper">
+    <sidebar class="sidebar-container" />
+   <div :class="{ hasTagsView: showTagsView }" class="main-container">
+      <div :class="{ 'fixed-header': fixedHeader }">
+        <navBar />
+      </div>
+      <appMain />
+   </div>
   </div>
 </template>
 
