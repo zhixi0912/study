@@ -12,7 +12,7 @@
 .app-main {
   position: relative;
   width: 100%;
-
+  padding: 20px;
   /* 50= navbar  50  */
   min-height: calc(100vh - 60px);
   overflow: hidden;
