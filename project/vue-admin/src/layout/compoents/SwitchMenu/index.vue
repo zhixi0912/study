@@ -1,13 +1,12 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
     <div class="main">
-    home
+        home
     </div>
 </template>
 
+<script setup lang="ts">
+
+</script>
 <style scoped>
 .main {
     height: 1800px;
