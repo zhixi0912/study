@@ -1,14 +1,14 @@
 <template>
-    <div class="main">
-        home
+    <div class="switch-box">
+        <el-icon><Grid /></el-icon>
     </div>
 </template>
 
 <script setup lang="ts">
-
+import { Grid } from '@element-plus/icons-vue'
 </script>
 <style scoped>
-.main {
-    height: 1800px;
+.switch-box {
+    color: #99a9bf;
 }
 </style>
