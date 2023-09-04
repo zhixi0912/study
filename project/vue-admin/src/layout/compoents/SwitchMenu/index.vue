@@ -10,5 +10,6 @@ import { Grid } from '@element-plus/icons-vue'
 <style scoped>
 .switch-box {
     color: #99a9bf;
+    font-size: 14px;
 }
 </style>
