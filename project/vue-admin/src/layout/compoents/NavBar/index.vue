@@ -12,7 +12,6 @@
 <script setup lang="ts">
 import NavRight from './NavRight.vue'
 import Breadcrumb from '../Breadcrumb/index.vue'
-import { Grid } from '@element-plus/icons-vue'
 </script>
 
 <style lang="scss" scoped>
