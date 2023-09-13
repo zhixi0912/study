@@ -2,9 +2,6 @@
 
 <template>
   <div class="sidebar-main">
-    <div class="switch-box" @click="switchStatus">
-      <el-icon><Grid /></el-icon>
-    </div>
     <el-menu
       default-active="2"
       class="el-menu-vertical-demo"
@@ -52,14 +49,14 @@ import {
   Document,
   Menu as IconMenu,
   Location,
-  Setting,
-  Grid
+  Setting
 } from '@element-plus/icons-vue'
+import { useFoldSideberStore } from '@/store/modules/settings.ts'
+import { storeToRefs } from 'pinia'
+const fold = useFoldSideberStore()
+const { isCollapse } = storeToRefs(fold)
 
-const isCollapse = ref(false)
-const switchStatus = () => {
-  isCollapse.value = !isCollapse.value
-}
+console.log('isCollapse------2------>', isCollapse.value)
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }

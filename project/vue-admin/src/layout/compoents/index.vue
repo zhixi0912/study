@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-const msg = ref(999)
+import SwitchMenu from './SwitchMenu/index.vue'
 </script>
 
 <template>
   <section class="app-main">
+    <div class="switch-main">
+        <SwitchMenu />
+    </div>
     <router-view />
   </section>
 </template>
@@ -18,6 +20,13 @@ const msg = ref(999)
   min-height: calc(100vh - 60px);
   overflow: hidden;
   background-color: var(--el-bg-color-page);
+  .switch-main {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    left: 0px;
+  }
 }
 
 .fixed-header + .app-main {
