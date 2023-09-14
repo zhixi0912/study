@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import SwitchMenu from './SwitchMenu/index.vue'
-</script>
-
 <template>
   <section class="app-main">
     <div class="switch-main">
@@ -10,6 +6,10 @@ import SwitchMenu from './SwitchMenu/index.vue'
     <router-view />
   </section>
 </template>
+
+<script setup lang="ts">
+import SwitchMenu from './SwitchMenu/index.vue'
+</script>
 
 <style lang="scss" scoped>
 .app-main {
