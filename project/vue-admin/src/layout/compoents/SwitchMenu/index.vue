@@ -13,7 +13,6 @@ const fold = useFoldSideberStore()
 const { isCollapse } = storeToRefs(fold)
 const switchMenu = () => {
     fold.foldSideber(isCollapse.value)
-    console.log('isCollapse------------>', isCollapse.value)
 }
 </script>
 <style scoped>
