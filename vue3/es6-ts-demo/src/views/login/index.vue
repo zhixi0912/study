@@ -234,7 +234,4 @@ onUnmounted(() => {
 })
 </script>
 <style lang="scss" scoped>
-.canvas {
-//  background: #000000;
-}
 </style>
