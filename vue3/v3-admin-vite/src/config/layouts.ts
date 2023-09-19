@@ -34,20 +34,20 @@ export interface LayoutSettings {
 
 /** 默认配置 */
 const defaultSettings: LayoutSettings = {
-  layoutMode: "top",
+  layoutMode: "left",
   showSettings: true,
-  showTagsView: false,
+  showTagsView: true,
   fixedHeader: true,
   showFooter: true,
   showLogo: true,
-  showNotify: false,
-  showThemeSwitch: false,
-  showScreenfull: false,
+  showNotify: true,
+  showThemeSwitch: true,
+  showScreenfull: true,
   showSearchMenu: true,
-  cacheTagsView: false,
+  cacheTagsView: true,
   showWatermark: true,
-  showGreyMode: false,
-  showColorWeakness: false
+  showGreyMode: true,
+  showColorWeakness: true
 }
 
 /** 项目配置 */
