@@ -10,3 +10,7 @@ router.replace({ path: "/" + route.params.path, query: route.query })
 <template>
   <div />
 </template>
+
+<style scoped>
+
+</style>
