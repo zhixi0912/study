@@ -12,5 +12,7 @@ router.replace({ path: "/" + route.params.path, query: route.query })
 </template>
 
 <style scoped>
-
+.box {
+  background: darkblue;
+}
 </style>
