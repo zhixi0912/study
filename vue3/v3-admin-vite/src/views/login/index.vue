@@ -88,7 +88,7 @@ createCode()
               :prefix-icon="User"
               size="large"
             />
-          </el-form-item>
+          </el-form-item> 
           <el-form-item prop="password">
             <el-input
               v-model.trim="loginFormData.password"
