@@ -10,5 +10,7 @@
 
 
 <style lang="scss" scoped>
-
+.login-main {
+  background: #1f2d3d;
+}
 </style>
