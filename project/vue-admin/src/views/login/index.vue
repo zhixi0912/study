@@ -5,7 +5,8 @@
 </template>
 
 <script setup lang="ts">
-
+const data = ref(false)
+console.log('data---->', data)
 </script>
 
 
