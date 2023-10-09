@@ -6,7 +6,6 @@ import {
   VideoPause,
   VideoCamera,
 } from '@element-plus/icons-vue'
-import * as rrweb from 'rrweb';
 
 
 const dialogVisible = ref(false)
@@ -25,24 +24,7 @@ const handleClose = (done: () => void) => {
 }
 
 
-const startRecord = () => {
-  //record() 方法启动录制
-  //stopFn为暂停录制的方法
-  let stopFn = rrweb.record({
-    //12秒后停止页面的录制，如果想一直录得话可以去掉。
-    emit(event) {
-      setTimeout(() => {
-        stopFn();
-      }, 12000);
-      // 用任意方式存  储 event 
-      //      store.commit("updateEvents", { event: event });
-    },
-  });
-  ElMessage({
-    message: "开启视频录制",
-    type: "success",
-  });
-};
+
 onMounted(() => {
 //  startRecord();
 });
@@ -52,13 +34,13 @@ onMounted(() => {
   <h1>{{ msg }}</h1>
   <el-row :gutter="12">
     <el-col :span="8">
-      <el-button type="primary" :icon="VideoPlay" @click="startRecord" />
+      <el-button type="success" :icon="VideoPlay" @click="startRecord" />
     </el-col>
     <el-col :span="8">
-      <el-button type="success" :icon="VideoPause" @click="stopFn" />
+      <el-button type="danger" :icon="VideoPause" @click="stopFn" />
     </el-col>
     <el-col :span="8">
-      <el-button type="danger" :icon="VideoCamera" @click="dialogVisible = true" />
+      <el-button type="primary" :icon="VideoCamera" @click="dialogVisible = true" />
     </el-col>
   </el-row>
   <div class="card">
