@@ -5,6 +5,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 const data = ref(false)
 console.log('data---->', data)
 </script>
