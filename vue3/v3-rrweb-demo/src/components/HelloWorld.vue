@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { ElMessageBox, ElMessage } from 'element-plus'
-import {
-  VideoPlay,
-  VideoPause,
-  VideoCamera,
-} from '@element-plus/icons-vue'
+
 
 
 const dialogVisible = ref(false)
@@ -25,24 +20,19 @@ const handleClose = (done: () => void) => {
 
 
 
+
+
+
+
+
 onMounted(() => {
-//  startRecord();
+  //  startRecord();
 });
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
-  <el-row :gutter="12">
-    <el-col :span="8">
-      <el-button type="success" :icon="VideoPlay" @click="startRecord" />
-    </el-col>
-    <el-col :span="8">
-      <el-button type="danger" :icon="VideoPause" @click="stopFn" />
-    </el-col>
-    <el-col :span="8">
-      <el-button type="primary" :icon="VideoCamera" @click="dialogVisible = true" />
-    </el-col>
-  </el-row>
+
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
     <p>

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "element-plus": "^2.3.14",
+    "recordrtc": "^5.6.2",
     "rrweb": "^2.0.0-alpha.4",
     "rrweb-player": "^1.0.0-alpha.4",
     "vue": "^3.3.4"

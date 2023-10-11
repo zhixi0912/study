@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+import Record from './components/Record.vue'
 import { ref } from 'vue'
 import { ElMessageBox, ElMessage } from 'element-plus'
 
@@ -64,6 +65,7 @@ const open4 = () => {
       </el-col>
     </el-row>
     <HelloWorld msg="Vite + Vue" />
+    <Record />
   </el-card>
   
   <el-dialog
