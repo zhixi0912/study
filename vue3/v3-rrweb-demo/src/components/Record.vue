@@ -40,6 +40,8 @@ import {
     VideoPause,
     VideoCamera,
 } from '@element-plus/icons-vue'
+// https://blog.csdn.net/weixin_41727824/article/details/107707949
+
 const startRecord = () => {
     ElMessage({
         message: '开始视频录制',
