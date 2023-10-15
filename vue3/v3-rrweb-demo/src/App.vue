@@ -120,6 +120,7 @@ const open4 = () => {
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
+  font-size: 12px;
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
