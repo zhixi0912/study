@@ -1,5 +1,5 @@
 <template>
-<el-row :gutter="12">
+<el-row :gutter="12" v-if="false">
     <el-col :span="8">
         <el-button type="success" :icon="VideoPlay" @click="startRecord" >开始</el-button>
     </el-col>
@@ -7,6 +7,17 @@
       <el-button type="danger" :icon="VideoPause" @click="stopRecord" >暂停</el-button>
     </el-col>
     <el-col :span="8">
+      <el-button type="primary" :icon="VideoCamera" @click="dialogVisible = true" >播放</el-button>
+    </el-col>
+</el-row>
+<el-row :gutter="12">
+    <el-col :span="8">
+        <el-button type="success" :icon="VideoPlay" @click="startRecord" > {{ startTxt }}</el-button>
+    </el-col>
+    <el-col :span="8">
+      <el-button type="danger" :icon="VideoPause" @click="stopRecord" > {{ startTxt }}</el-button>
+    </el-col>
+    <el-col :span="8" v-if="false">
       <el-button type="primary" :icon="VideoCamera" @click="dialogVisible = true" >播放</el-button>
     </el-col>
 </el-row>
@@ -33,7 +44,7 @@
 </template>
 <script lang="ts" setup>
 import RecordRTC from 'recordrtc';
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, reactive } from 'vue'
 import { ElMessageBox, ElMessage } from 'element-plus'
 import {
     VideoPlay,
@@ -41,7 +52,11 @@ import {
     VideoCamera,
 } from '@element-plus/icons-vue'
 // https://blog.csdn.net/weixin_41727824/article/details/107707949
-
+const startTxt = ref('开始录制')
+const pauseTxt = ref('暂停')
+const start = ref(null)
+const isPause = ref(false)
+const recorder = reactive({})
 const startRecord = () => {
     ElMessage({
         message: '开始视频录制',
@@ -57,6 +72,25 @@ const stopRecord = () => {
     })
 
 }
+
+const startRecording = (callback) => {
+    if (startTxt.value==='开始录制') {
+        captureScreen(()=> {
+
+        })
+    }
+}
+
+const stopRecording = () => {
+    recorder && recorder.stopRecording(()=> {
+
+    })
+}
+
+const captureScreen = () => {
+
+}
+
 
 const dialogVisible = ref(false)
 const loading = ref(true)
