@@ -87,11 +87,15 @@ const stopRecording = () => {
 
     })
 }
-
+//初始化录制
 const captureScreen = () => {
 
 }
 
+//流监听
+const addStreamStopListener = (stream, callback) => {
+
+}
 
 const dialogVisible = ref(false)
 const loading = ref(true)
