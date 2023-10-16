@@ -52,6 +52,7 @@ import {
     VideoCamera,
 } from '@element-plus/icons-vue'
 // https://blog.csdn.net/weixin_41727824/article/details/107707949
+
 const startTxt = ref('开始录制')
 const pauseTxt = ref('暂停')
 const start = ref(null)
