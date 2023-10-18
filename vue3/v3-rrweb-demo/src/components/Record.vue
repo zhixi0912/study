@@ -76,9 +76,28 @@ const stopRecord = () => {
 
 const startRecording = (callback) => {
     if (startTxt.value==='开始录制') {
-        captureScreen(()=> {
-
+        captureScreen((screenStream)=> {
+            addStreamStopListener(screenStream, ()=>{
+                console.log("流停止监听");
+                stopRecord()
+            })
+            isPause.value = true;
+            startTxt.value = '完成录制'
+            let options = {
+                type: 'video',
+                mimeType: 'video/mp4',
+                disableLogs: false, // 日志开关,
+                getNativeBlob: false,
+                ignoreMutedMedia: false,
+            }
+            recorder.value = RecordRTC(screenStream, options)
+            recorder.startRecording()
+            recorder.screen = screenStream
+            videoStart = true
+            callback(true)
         })
+    } else if (startTxt.value === "完成录制") {
+        stopRecord();
     }
 }
 
