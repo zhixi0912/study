@@ -127,6 +127,7 @@ const handleClose = (done: () => void) => {
         // catch error
     })
 }
+
 </script>
 <style scoped>
 .vido-box {
