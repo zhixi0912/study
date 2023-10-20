@@ -53,6 +53,10 @@ import {
 } from '@element-plus/icons-vue'
 // https://blog.csdn.net/weixin_41727824/article/details/107707949
 
+// https://juejin.cn/post/6992104922426654727
+
+//https://juejin.cn/post/7072669600839630879
+
 const startTxt = ref('开始录制')
 const pauseTxt = ref('暂停')
 const start = ref(null)
