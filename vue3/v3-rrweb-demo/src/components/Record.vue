@@ -14,8 +14,8 @@
     <el-col :span="8">
         <el-button type="success" :icon="VideoPlay" @click="startRecord" > {{ startTxt }}</el-button>
     </el-col>
-    <el-col :span="8">
-      <el-button type="danger" :icon="VideoPause" @click="stopRecord" > {{ startTxt }}</el-button>
+    <el-col :span="8" v-if="startTxt !== '开始录制'">
+      <el-button type="danger" :icon="VideoPause" @click="stopRecord" > {{ pauseTxt }}</el-button>
     </el-col>
     <el-col :span="8" v-if="false">
       <el-button type="primary" :icon="VideoCamera" @click="dialogVisible = true" >播放</el-button>
@@ -101,9 +101,36 @@ const startRecording = (callback) => {
     }
 }
 
-const stopRecording = () => {
+const stopRecording = (callback) => {
     recorder && recorder.stopRecording(()=> {
-
+        let fileName = getTimeIndex()
+        const url = URL.createObjectURL(recorder.getBlob());
+        let aTag = document.createElement("a")
+        let videoFile = new File(
+            [recorder.getBlob()],
+            fileName + ".mp4",
+            {
+                type: "video/mp4",
+            }
+        );
+        let downloadUrl = URL.createObjectURL(videoFile);
+        document.body.appendChild(this.aTag);
+        aTag.style.display = "none";
+        aTag.href = url;
+        videoFile = videoFile;
+        let previewVideo = downloadUrl;
+        // 停止录屏时同时下载到本地
+        aTag.download = fileName + ".mp4";
+        aTag.click();
+        recorder.screen.stop();
+        recorder.destroy();
+        recorder = null;
+        videoStart = false;
+        ElMessage({
+            message: "录屏停止",
+            type: "success",
+        });
+        callback(false);
     })
 }
 //初始化录制
