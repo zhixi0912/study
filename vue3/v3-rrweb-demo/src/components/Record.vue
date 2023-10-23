@@ -52,9 +52,7 @@ import {
     VideoCamera,
 } from '@element-plus/icons-vue'
 // https://blog.csdn.net/weixin_41727824/article/details/107707949
-
 // https://juejin.cn/post/6992104922426654727
-
 //https://juejin.cn/post/7072669600839630879
 
 const startTxt = ref('开始录制')
@@ -67,7 +65,7 @@ const startRecord = () => {
         message: '开始视频录制',
         type: 'success'
     })
-
+    console.log('测试开始')
 }
 
 const stopRecord = () => {
