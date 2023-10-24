@@ -73,7 +73,7 @@ const stopRecord = () => {
         message: '停止视频录制',
         type: 'success'
     })
-
+    console.log('测试停止')
 }
 
 const startRecording = (callback) => {
