@@ -65,7 +65,7 @@ const startRecord = () => {
         message: '开始视频录制',
         type: 'success'
     })
-    console.log('测试开始')
+    console.log('测试开始---------->')
 }
 
 const stopRecord = () => {
