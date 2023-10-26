@@ -137,7 +137,7 @@ const stopRecording = (callback) => {
 }
 //初始化录制
 const captureScreen = () => {
-
+    console.log("测试录屏效果")
 }
 
 //流监听
