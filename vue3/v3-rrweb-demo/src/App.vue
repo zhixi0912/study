@@ -117,6 +117,7 @@ const open4 = () => {
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
+  font-size: 12px;
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
