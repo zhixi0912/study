@@ -11,6 +11,7 @@ const direction = ref('rtl')
 function cancelClick() {
   drawer2.value = false
 }
+const data = ref('测试')
 function confirmClick() {
   ElMessageBox.confirm(`Are you confirm to chose ${radio1.value} ?`)
     .then(() => {
