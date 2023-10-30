@@ -142,7 +142,7 @@ const captureScreen = () => {
 
 //流监听
 const addStreamStopListener = (stream, callback) => {
-    console.log("测试流监听")
+    console.log("测试流监听---------->")
 }
 
 const dialogVisible = ref(false)
