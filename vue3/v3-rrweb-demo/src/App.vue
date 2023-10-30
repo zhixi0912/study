@@ -11,6 +11,7 @@ const direction = ref('rtl')
 function cancelClick() {
   drawer2.value = false
 }
+const data = ref('测试')
 function confirmClick() {
   ElMessageBox.confirm(`Are you confirm to chose ${radio1.value} ?`)
     .then(() => {
@@ -117,6 +118,7 @@ const open4 = () => {
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
+  font-size: 12px;
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
