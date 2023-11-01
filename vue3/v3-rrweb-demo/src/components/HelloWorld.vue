@@ -50,5 +50,6 @@ onMounted(() => {
 <style scoped>
 .read-the-docs {
   color: #888;
+  font-size: 12px;
 }
 </style>
