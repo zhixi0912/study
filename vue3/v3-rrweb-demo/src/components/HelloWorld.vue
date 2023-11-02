@@ -51,5 +51,6 @@ onMounted(() => {
 .read-the-docs {
   color: #888;
   font-size: 12px;
+  display: flex;
 }
 </style>
