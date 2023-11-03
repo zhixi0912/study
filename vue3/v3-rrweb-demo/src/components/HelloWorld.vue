@@ -52,5 +52,6 @@ onMounted(() => {
   color: #888;
   font-size: 12px;
   display: flex;
+  justify-self: center;
 }
 </style>
