@@ -139,10 +139,13 @@ const stopRecording = (callback) => {
 const captureScreen = () => {
     console.log("测试录屏效果")
 }
-
+const back = () => {
+    console.log('返回')
+}
 //流监听
 const addStreamStopListener = (stream, callback) => {
     console.log("测试流监听---------->")
+    back()
 }
 
 const dialogVisible = ref(false)
