@@ -47,4 +47,8 @@ onMounted(() => {
 
 </template>
 
-<style scoped></style>
+<style scoped>
+.card {
+margin: 0 auto;
+}
+</style>
