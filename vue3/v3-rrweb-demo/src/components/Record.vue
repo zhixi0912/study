@@ -76,6 +76,9 @@ const stopRecord = () => {
     console.log('测试停止')
 }
 
+const goBack = () => {
+  console.log('测试返回')
+}
 const startRecording = (callback) => {
     if (startTxt.value==='开始录制') {
         captureScreen((screenStream)=> {
