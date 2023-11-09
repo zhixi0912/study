@@ -74,6 +74,7 @@ const stopRecord = () => {
         type: 'success'
     })
     console.log('测试停止')
+  goBack()
 }
 
 const goBack = () => {
