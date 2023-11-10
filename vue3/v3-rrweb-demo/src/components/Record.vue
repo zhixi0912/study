@@ -79,6 +79,7 @@ const stopRecord = () => {
 
 const goBack = () => {
   console.log('测试返回')
+  start.value = true
 }
 const startRecording = (callback) => {
     if (startTxt.value==='开始录制') {
