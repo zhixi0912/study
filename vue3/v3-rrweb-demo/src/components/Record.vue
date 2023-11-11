@@ -143,6 +143,7 @@ const stopRecording = (callback) => {
 //初始化录制
 const captureScreen = () => {
     console.log("测试录屏效果")
+    back()
 }
 const back = () => {
     console.log('返回')
