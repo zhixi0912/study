@@ -146,7 +146,8 @@ const captureScreen = () => {
     back(1)
 }
 const back = (id: Number) => {
-    console.log('返回', id)
+    const data = 'yes'
+    console.log('返回', id, data)
 }
 //流监听
 const addStreamStopListener = (stream, callback) => {
