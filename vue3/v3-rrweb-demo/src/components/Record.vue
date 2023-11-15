@@ -61,11 +61,12 @@ const start = ref(null)
 const isPause = ref(false)
 const recorder = reactive({})
 const startRecord = () => {
+  let name = ref('开始视频录制')
     ElMessage({
-        message: '开始视频录制',
+        message: name.value,
         type: 'success'
     })
-  let name = ref('test')
+
     console.log('测试开始---------->',name.value)
 }
 
