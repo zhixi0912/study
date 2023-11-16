@@ -66,16 +66,16 @@ const startRecord = () => {
         message: name.value,
         type: 'success'
     })
-
     console.log('测试开始---------->',name.value)
 }
 
 const stopRecord = () => {
+  let msg = ref('停止视频录制')
     ElMessage({
-        message: '停止视频录制',
+        message: msg,
         type: 'success'
     })
-    console.log('测试停止')
+    console.log('测试停止', msg)
   goBack()
 }
 
