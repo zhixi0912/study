@@ -80,7 +80,8 @@ const stopRecord = () => {
 }
 
 const goBack = () => {
-  console.log('测试返回')
+  let msg = '测试返回'
+  console.log('测试返回',msg)
   start.value = true
 }
 const startRecording = (callback) => {
