@@ -57,7 +57,7 @@ import {
 
 const startTxt = ref('开始录制')
 const pauseTxt = ref('暂停')
-const start = ref(null)
+const start = ref(false)
 const isPause = ref(false)
 const recorder = reactive({})
 const startRecord = () => {
@@ -70,6 +70,7 @@ const startRecord = () => {
 }
 
 const stopRecord = () => {
+  start.value = true
   let msg = ref('停止视频录制')
     ElMessage({
         message: msg,
@@ -82,7 +83,7 @@ const stopRecord = () => {
 const goBack = () => {
   let msg = '测试返回'
   console.log('测试返回',msg)
-  start.value = true
+  start.value = false
 }
 const startRecording = (callback) => {
     if (startTxt.value==='开始录制') {
