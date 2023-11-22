@@ -85,6 +85,7 @@ const goBack = () => {
   let msg = '测试返回'
   console.log('测试返回',msg)
   start.value = false
+  startRecording()
 }
 const startRecording = (callback) => {
     if (startTxt.value==='开始录制') {
