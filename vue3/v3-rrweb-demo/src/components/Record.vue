@@ -83,7 +83,7 @@ const stopRecord = () => {
 
 const goBack = () => {
   let msg = '测试返回'
-  console.log('测试返回',msg)
+  console.log('测试返回',msg,start.value)
   start.value = false
   startRecording()
 }
