@@ -67,7 +67,7 @@ const startRecord = () => {
       type: 'success'
   })
   console.log('测试开始---------->',name.value,isPause.value)
-  goBack()
+  goBack(name)
 }
 
 const stopRecord = () => {
@@ -78,12 +78,12 @@ const stopRecord = () => {
         type: 'success'
     })
     console.log('测试停止', msg)
-  goBack()
+  goBack(start)
 }
 
-const goBack = () => {
+const goBack = (val) => {
   let msg = '测试返回'
-  console.log('测试返回',msg,start.value)
+  console.log('测试返回',msg,start.value,val)
   start.value = false
   startRecording()
 }
