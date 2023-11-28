@@ -69,7 +69,10 @@ const startRecord = () => {
   console.log('测试开始---------->',name.value,isPause.value)
   goBack(name)
 }
-
+const getTableData = () => {
+  const data = [{name: '///'}]
+  console.log(data)
+}
 const stopRecord = () => {
   start.value = true
   let msg = ref('停止视频录制')
@@ -86,6 +89,7 @@ const goBack = (val) => {
   console.log('测试返回',msg,start.value,val)
   start.value = false
   startRecording()
+  getTableData()
 }
 const startRecording = (callback) => {
     if (startTxt.value==='开始录制') {
