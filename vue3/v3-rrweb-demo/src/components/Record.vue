@@ -66,7 +66,7 @@ const startRecord = () => {
       message: name.value,
       type: 'success'
   })
-  console.log('测试开始---------->',name.value,isPause.value)
+  console.log('测试开始----/------>',name.value,isPause.value)
   goBack(name)
 }
 const getTableData = () => {
