@@ -11,12 +11,15 @@ const count = ref(0)
 
 console.log('count-->',count)
 
-
+function back(count) {
+  console.log('count-->',count)
+}
 
 
 
 
 onMounted(() => {
+  back()
   //  startRecord();
 });
 </script>
