@@ -161,7 +161,7 @@ const back = (id: Number) => {
 }
 //流监听
 const addStreamStopListener = (stream, callback) => {
-    console.log("测试流监听---------->")
+    console.log("测试流监听---------->",stream)
     back(2)
 }
 
