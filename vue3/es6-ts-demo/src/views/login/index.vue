@@ -204,7 +204,7 @@ const forIn = () => {
     console.log(x);//'A', 'B', 'C'
   }
   for (let index in array1) {
-    console.log('----------->', index, array1[index])
+    console.log('----------->', index, array1[index], array1)
   }
   for (let x of array2) { // 遍历Set
     console.log(x);//'A', 'B', 'C'
