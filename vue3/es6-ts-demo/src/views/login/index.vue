@@ -178,9 +178,9 @@ const submitForm = async (formEl: FormInstance | undefined) => {
   if (!formEl) return
   await formEl.validate((valid, fields) => {
     if (valid) {
-      console.log('submit!',valid)
+      console.log('submit!校验成功！',valid)
     } else {
-      console.log('error submit!', fields)
+      console.log('error submit!校验失败', fields)
     }
   })
 }
