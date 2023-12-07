@@ -218,6 +218,7 @@ const forIn = () => {
 
 const goHome = () => {
   router.push('/index')
+  console.log(router)
 }
 let anmin: any
 onMounted(() => {
