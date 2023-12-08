@@ -217,8 +217,9 @@ const forIn = () => {
 
 
 const goHome = () => {
+  let array = []
   router.push('/index')
-  console.log(router)
+  console.log(router,array)
 }
 let anmin: any
 onMounted(() => {
