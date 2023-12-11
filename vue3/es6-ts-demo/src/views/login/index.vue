@@ -218,6 +218,7 @@ const forIn = () => {
 
 const goHome = () => {
   let array = []
+  array.push({a:'name'})
   router.push('/index')
   console.log(router,array)
 }
