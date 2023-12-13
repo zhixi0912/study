@@ -220,7 +220,7 @@ const goHome = () => {
   let array = []
   array.push({a:'name'})
   router.push('/index')
-  console.log(router,array,array.a)
+  console.log(router,array,array.a,1='x',2='y',3='z')
 }
 let anmin: any
 onMounted(() => {
