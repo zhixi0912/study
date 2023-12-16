@@ -221,8 +221,6 @@ const goHome = () => {
   array.push({a:'name'})
   router.push('/index')
   console.log(router,array,array.a,1='x',2='y',3='z')
-  console.log(router,array,array.a,1='x',2='y',3='z')
-  console.log(router,array,array.a,1='x',2='y',3='z')
 }
 let anmin: any
 onMounted(() => {
