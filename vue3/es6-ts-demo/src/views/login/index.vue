@@ -208,6 +208,7 @@ const forIn = () => {
   }
   for (let x of array2) { // 遍历Set
     console.log(x);//'A', 'B', 'C'
+    console.log(x);//'A', 'B', 'C'
   }
   for (let x of array3) { // 遍历Map
       console.log(x[0] + '=' + x[1]);//1='x',2='y',3='z'
