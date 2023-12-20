@@ -2,6 +2,8 @@
 defineProps<{
   msg: string
 }>()
+
+props.msg = 'hello'
 </script>
 
 <template>
