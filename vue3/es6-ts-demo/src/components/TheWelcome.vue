@@ -21,7 +21,7 @@ import SupportIcon from './icons/IconSupport.vue'
 
   <WelcomeItem>
     <template #icon>
-      <ToolingIcon /><DocumentationIcon />
+      <ToolingIcon />
     </template>
     <template #heading>Tooling</template>
 
@@ -44,7 +44,7 @@ import SupportIcon from './icons/IconSupport.vue'
       <EcosystemIcon />
     </template>
     <template #heading>Ecosystem</template>
-
+    <template #heading>Ecosystem</template>
     Get official tools and libraries for your project:
     <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>,
     <a href="https://router.vuejs.org/" target="_blank" rel="noopener">Vue Router</a>,
