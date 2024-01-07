@@ -8,6 +8,7 @@ defineProps<{ msg: string }>()
 
 const count = ref(0)
 const num = ref(0)
+const add = ref(0)
 
 console.log('count-->',count,num)
 
