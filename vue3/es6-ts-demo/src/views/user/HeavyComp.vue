@@ -1,6 +1,6 @@
 <template>
   <div class="item-container">
-      <div class="item" v-for="n in 10000"></div>
+      <div class="item" v-for="n in 10000">{{item}}</div>
   </div>
 </template>
 
