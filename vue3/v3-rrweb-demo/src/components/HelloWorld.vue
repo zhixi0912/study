@@ -7,9 +7,10 @@ import { ref, onMounted } from 'vue'
 defineProps<{ msg: string }>()
 
 const count = ref(0)
+const num = ref(0)
+const add = ref(0)
 
-
-console.log('count-->',count)
+console.log('count-->',count,num)
 
 function back(count) {
   console.log('count-->',count)
