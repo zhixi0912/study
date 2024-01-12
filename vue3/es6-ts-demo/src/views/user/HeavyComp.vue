@@ -10,6 +10,7 @@
   flex-wrap: wrap;
   justify-content: center;
   border: 3px solid #ff4400;
+border: 3px solid #ff4400;
   .item {
     width: 5px;
     height: 3px;
