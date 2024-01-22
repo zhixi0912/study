@@ -198,16 +198,7 @@ const options = Array.from({ length: 10000 }).map((_, idx) => ({
 
 const forIn = () => {
 
-  for (let x of array1) { // 遍历Array
-    console.log(x);//'A', 'B', 'C'
-  }
-  
-  for (let x of array2) { // 遍历Set
-    console.log(x);//'A', 'B', 'C'
-  }
-  for (let x of array3) { // 遍历Map
-      console.log(x[0] + '=' + x[1]);//1='x',2='y',3='z'
-  }
+
 }
 
 
@@ -216,7 +207,6 @@ const goHome = () => {
   let array = []
   array.push({a:'name'})
   router.push('/index')
-  console.log(router,array,array.a,1='x',2='y',3='z')
 }
 let anmin: any
 onMounted(() => {
