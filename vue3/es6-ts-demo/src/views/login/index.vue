@@ -134,7 +134,7 @@ const rules = reactive<FormRules<RuleForm>>({
   count: [
     {
       required: true,
-      message: 'Please select Activity count',
+      message: 'Please select Activity count 测试同步',
       trigger: 'change',
     },
     ],
