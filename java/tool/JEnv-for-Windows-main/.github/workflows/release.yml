@@ -1,0 +1,50 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  release:
+    name: "Release"
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "Import workspace"
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: "Set env"
+        run: 'echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV'
+
+      - name: Git setup
+        run: |
+          git fetch
+          git checkout main
+          git config --global user.name "FelixSelter"
+          git config --global user.email "felixselterdeveloping@gmail.com"
+
+      - name: Find and Replace
+        uses: jacobtomlinson/gha-find-replace@v2
+        with:
+          include: "src/jenv.ps1"
+          find: 'JENV_VERSION = "(.+?)"'
+          replace: 'JENV_VERSION = "${{ env.RELEASE_VERSION }}"'
+          regex: true
+
+      - name: Commit and push changes
+        run: |
+          git add src/jenv.ps1
+          git commit -m "Inserted version into source file"
+          git push
+
+      - name: "Zip files"
+        run: "zip -r JEnv.zip src/ jenv.bat java.bat"
+
+      - name: "Create Release"
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          files: JEnv.zip
