@@ -1,0 +1,2 @@
+ 这是一个前端3D抽奖程序，基于three.js
+https://github.com/moshang-xc/lottery.git
