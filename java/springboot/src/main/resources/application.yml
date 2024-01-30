@@ -1,0 +1,27 @@
+# xxxAutoConfigurartion :自动配置类，给容器中添加组件
+# xxxProperties : 封装配置文件中的相关属性
+spring:
+  profiles:
+    active: "dev"
+
+---
+spring:
+  config:
+    activate:
+      on-profile: "dev"
+server:
+  port: 8001
+---
+spring:
+  config:
+    activate:
+      on-profile: "test"
+server:
+  port: 8002
+---
+spring:
+  config:
+    activate:
+      on-profile: "prod"
+server:
+  port: 8003
