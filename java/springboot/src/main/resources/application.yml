@@ -2,7 +2,7 @@
 # xxxProperties : 封装配置文件中的相关属性
 spring:
   profiles:
-    active: "dev"
+    active: "test"
 
 ---
 spring:
