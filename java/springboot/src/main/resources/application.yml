@@ -13,7 +13,7 @@ server:
   port: 8001
 ---
 spring:
-  config:
+  config: 
     activate:
       on-profile: "test"
 server:

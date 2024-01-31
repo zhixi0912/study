@@ -71,8 +71,8 @@ REDIS_HOST=127.0.0.1
 REDIS_PORT=6379
 
 # 密钥配置
-SECRET_KEY='qwerasdfzxcv'
-
+SECRET_KEY='qwerasdfzxcv' //mac
+SECRET_KEY='1234qwerasdf' //win
 # 邮箱配置
 MAIL_SERVER='smtp.qq.com'
 MAIL_USERNAME='123@qq.com'
