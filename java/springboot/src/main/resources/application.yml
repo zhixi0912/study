@@ -2,7 +2,7 @@
 # xxxProperties : 封装配置文件中的相关属性
 spring:
   profiles:
-    active: "test"
+    active: "dev"
 
 ---
 spring:
@@ -13,7 +13,7 @@ server:
   port: 8001
 ---
 spring:
-  config: 
+  config:
     activate:
       on-profile: "test"
 server:
