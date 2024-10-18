@@ -1,0 +1,49 @@
+// 创建数据库 spring.application.name=springboot-mybatis
+CREATE DATABASE `collect-infor` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+-- `collect-infor`.sys_user definition
+// 创建表
+-- `collect-infor`.sys_user definition
+
+CREATE TABLE `sys_user` (
+  `id` int NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `username` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '用户名',
+  `password` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '密码',
+  `nickname` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '昵称',
+  `email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '邮箱',
+  `phone` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '电话',
+  `gender` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '性别',
+  `bank_id` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '银行卡',
+  `card_id` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '身份证',
+  `address` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '地址',
+  `wx_id` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '微信号',
+  `avatar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '头像',
+  `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+// 插入数据
+
+INSERT INTO `collect-infor`.sys_user
+(id, username, password, nickname, email, phone, gender, bank_id, card_id, address, wx_id, avatar, create_time)
+VALUES(1, 'admin', '123456', '管理员', 'admin@qq.com', '18899998888', '男', '6102009001', NULL, '上海市静安区', 'wx_number', NULL, '2024-02-03 16:12:39');
+INSERT INTO `collect-infor`.sys_user
+(id, username, password, nickname, email, phone, gender, bank_id, card_id, address, wx_id, avatar, create_time)
+VALUES(2, '200069', '123456', '赵晓飞', '200069@qq.com', '18899998889', '男', '6102009002', NULL, '上海市黄浦区', 'wx_200069', NULL, '2024-09-03 16:12:39');
+INSERT INTO `collect-infor`.sys_user
+(id, username, password, nickname, email, phone, gender, bank_id, card_id, address, wx_id, avatar, create_time)
+VALUES(3, '200070', '123456', '巩金国', '200070@qq.com', '18899998890', '男', '6102009003', NULL, '上海市静安区', 'wx_200070', NULL, '2024-09-03 16:12:39');
+INSERT INTO `collect-infor`.sys_user
+(id, username, password, nickname, email, phone, gender, bank_id, card_id, address, wx_id, avatar, create_time)
+VALUES(4, '200071', '123456', '邱梓童', '200071@qq.com', '18899998891', '女', '6102009004', NULL, '上海市浦东新区', 'wx_2000701', NULL, '2024-09-03 16:12:39');
+INSERT INTO `collect-infor`.sys_user
+(id, username, password, nickname, email, phone, gender, bank_id, card_id, address, wx_id, avatar, create_time)
+VALUES(5, '200072', '123456', '任重', '200072@qq.com', '18899998892', '男', '6102009005', NULL, '上海市宝山区', 'wx_2000702', NULL, '2024-09-03 16:12:39');
+INSERT INTO `collect-infor`.sys_user
+(id, username, password, nickname, email, phone, gender, bank_id, card_id, address, wx_id, avatar, create_time)
+VALUES(6, '200073', '123456', '乔治', '200073@qq.com', '18899998893', '男', '6102009006', NULL, '上海市长宁区', 'wx_2000703', NULL, '2024-09-03 16:12:39');
+INSERT INTO `collect-infor`.sys_user
+(id, username, password, nickname, email, phone, gender, bank_id, card_id, address, wx_id, avatar, create_time)
+VALUES(7, '200074', '123456', '陈光辉', '200074@qq.com', '18899998894', '男', '6102009007', NULL, '上海市嘉定区', 'wx_2000704', NULL, '2024-09-03 16:12:39');
+INSERT INTO `collect-infor`.sys_user
+(id, username, password, nickname, email, phone, gender, bank_id, card_id, address, wx_id, avatar, create_time)
+VALUES(8, '200075', '123456', '刘晓莉', '200075@qq.com', '18899998895', '女', '6102009008', NULL, '上海市静安区', 'wx_2000705', NULL, '2024-09-03 16:12:39');
