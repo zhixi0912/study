@@ -40,9 +40,8 @@
 <!--        mybatis的起步依赖-->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter-test</artifactId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>3.0.3</version>
-            <scope>test</scope>
         </dependency>
 
         <dependency>
